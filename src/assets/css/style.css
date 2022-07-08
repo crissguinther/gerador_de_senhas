@@ -1,0 +1,62 @@
+:root {
+  --bg: bisque;
+  --primary-color: rgb(196, 60, 135);
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  min-width: 75vw;
+  background-color: aliceblue;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main form button[type="submit"] {
+  all: unset;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2em;
+  padding: 0.3em;
+  cursor: pointer;
+  width: clamp(30%, 50%, 100%);
+  background-color: var(--primary-color);
+  color: var(--bg);
+  font-weight: bold;
+  border: 1px solid #333;
+}
+
+main form button[type="submit"]:hover {
+  border-color: var(--primary-color);
+  background-color: var(--bg);
+  color: #333;
+}
+
+.form-group {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.results {
+  font-size: 1.3em;
+  font-weight: bold;
+  height: fit-content;
+  word-wrap: break-word;
+  max-width: 100%;
+}

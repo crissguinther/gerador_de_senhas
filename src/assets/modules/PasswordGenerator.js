@@ -1,32 +1,11 @@
 const arrNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-const letters = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
+const letters = (() => {
+  let arr = [];
+  for (let i = 97; i <= 122; i++) {
+    arr.push(String.fromCharCode(i));
+  }
+  return arr;
+})();
 const symbols = ["!", "@", "#", "$", "%", "^", "&", "*"];
 
 export default class PasswordGenerator {

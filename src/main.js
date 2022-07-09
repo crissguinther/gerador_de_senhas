@@ -8,15 +8,18 @@ function generatePassword() {
   let options = {};
   for (let input of inputs) {
     if (input.type === "checkbox") options[input.name] = input.checked;
-    else options[input.name] = Number(input.value);
+    else {
+      if (input.value > 50) input.value = 50;
+      options[input.name] = Number(input.value);
+    }
   }
   const passGen = new PasswordGenerator(options);
   return passGen.generate();
 }
 
 form.addEventListener("submit", (e) => {
-  const results = document.querySelector(".results");
   e.preventDefault();
+  const results = document.querySelector(".results");
   results.classList.add("results");
   results.innerText = `Senha gerada: ${generatePassword()}`;
 });

@@ -25,7 +25,6 @@ export default class PasswordGenerator {
       arr = arr.concat(arr.map((letter) => letter.toUpperCase()));
     if (this.options.numbers === true) arr = arr.concat(arrNum);
     if (this.options.symbols === true) arr = arr.concat(symbols);
-    console.log(arr);
     return arr;
   }
 
